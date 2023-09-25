@@ -36,14 +36,14 @@ function calculatesFarePrice(start, destination){
     if(feetlength <= 400){
        return 0;
     }
-    else if(feetlength > 400 && feetlength <= 2000){
+    else if(feetlength > 400 || feetlength <= 2000){
         return (feetlength - 400) * 0.02;
     }
     else if(feetlength > 2000 && feetlength <= 2500){
         return 25;
     }
     else {
-        return "cannot travel that far";
+        return "Cannot travel that far";
     }   
 }
 const feetlength43 = (calculatesFarePrice(43, 44));
@@ -54,3 +54,7 @@ const feetlength50 = (calculatesFarePrice(50, 58));
 console.log( feetlength50);
 const feetlength24 = (calculatesFarePrice(34, 24));
 console.log( feetlength24);
+
+
+
+
